@@ -12,16 +12,18 @@
 
         public string Content { get; set; }
 
-        public string FeaturedImage { get; set; }
-
-        public string UrlHandle { get; set; }
-
-        public string Author { get; set; }
-
         public DateTime PublishedDate { get; set; }
 
         public Boolean IsVisible { get; set; }
 
+        // relation one to many with Author
+
+        public Guid AuthorId { get; set; }
+        public Author Author { get; set; }
+        
+        // relation many to many with Category
+
+        public List<Category> Categories { get; set; }
 
     }
 }

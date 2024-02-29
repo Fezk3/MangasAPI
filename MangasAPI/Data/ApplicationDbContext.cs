@@ -11,9 +11,9 @@ namespace MangasAPI.Data
 
         // DbSet -> tables in the database
 
-        public DbSet<MangaPost> MangaPosts { get; set; }
-
+        public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<MangaPost> MangaPosts { get; set; }
 
     }
 }

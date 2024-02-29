@@ -1,18 +1,14 @@
 ﻿namespace MangasAPI.Models.Domain
 {
-    public class Category
+    public class Author
     {
-
-        // properties
 
         public Guid Id { get; set; }
 
         public string Name { get; set; }
 
-        public string UrlHandle { get; set; }
-
-        // relation many to many with MangaPost
-
+        // relation one to many with MangaPost
         public List<MangaPost> MangaPosts { get; set; }
+
     }
 }
