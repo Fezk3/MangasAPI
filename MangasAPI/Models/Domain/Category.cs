@@ -9,10 +9,7 @@
 
         public string Name { get; set; }
 
-        public string UrlHandle { get; set; }
-
         // relation many to many with MangaPost
-
         public List<MangaPost> MangaPosts { get; set; }
     }
 }
