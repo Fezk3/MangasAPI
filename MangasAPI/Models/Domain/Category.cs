@@ -10,6 +10,6 @@
         public string Name { get; set; }
 
         // relation many to many with MangaPost
-        public List<MangaPost> MangaPosts { get; set; }
+        public List<MangaPost>? MangaPosts { get; set; }
     }
 }

@@ -5,7 +5,6 @@
 
         public string Name { get; set; }
 
-        // can be null
         public List<MangaPostDto>? MangaPosts { get; set; }
 
     }

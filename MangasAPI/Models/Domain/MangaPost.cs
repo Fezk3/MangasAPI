@@ -10,9 +10,9 @@
 
         public string Content { get; set; }
 
-        public DateTime PublishedDate { get; set; }
+        public DateTime PublishedDate { get; set; } = DateTime.Now;
 
-        public Boolean IsVisible { get; set; }
+        public Boolean IsVisible { get; set; } = true;
 
         // relation one to many with Author
 
