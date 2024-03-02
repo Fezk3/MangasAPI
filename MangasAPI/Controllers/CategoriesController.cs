@@ -80,14 +80,6 @@ namespace MangasAPI.Controllers
             {
                 Id = c.Id,
                 Name = c.Name,
-                MangaPosts = c.MangaPosts.Select(mp => new MangaPostDto
-                {
-                    Title = mp.Title,
-                    Author = new AuthorDto
-                    {
-                        Name = mp.Author.Name
-                    }
-                }).ToList()
             });
 
             return Ok(response);
