@@ -48,14 +48,6 @@ namespace MangasAPI.Controllers
 
                 Id = category.Id,
                 Name = category.Name,
-                MangaPosts = category.MangaPosts.Select(mp => new MangaPostDto
-                {
-                    Title = mp.Title,
-                    Author = new AuthorDto
-                    {
-                        Name = mp.Author.Name
-                    }
-                }).ToList()
 
             };
 
@@ -102,15 +94,8 @@ namespace MangasAPI.Controllers
             var response = new CategoryDto
             {
                 Id = category.Id,
-                Name = category.Name,
-                MangaPosts = category.MangaPosts.Select(mp => new MangaPostDto
-                {
-                    Title = mp.Title,
-                    Author = new AuthorDto
-                    {
-                        Name = mp.Author.Name
-                    }
-                }).ToList()
+                Name = category.Name
+
             };
 
             return Ok(response);
@@ -119,7 +104,7 @@ namespace MangasAPI.Controllers
 
         // Put
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCategory(Guid id, [FromBody] Category request)
+        public async Task<IActionResult> UpdateCategory([FromRoute]Guid id, [FromBody] Category request)
         {
 
             var category = await categoryrepo.GetByIdAsync(id);
@@ -139,15 +124,7 @@ namespace MangasAPI.Controllers
             var response = new CategoryDto
             {
                 Id = category.Id,
-                Name = category.Name,
-                MangaPosts = category.MangaPosts.Select(mp => new MangaPostDto
-                {
-                    Title = mp.Title,
-                    Author = new AuthorDto
-                    {
-                        Name = mp.Author.Name
-                    }
-                }).ToList()
+                Name = category.Name
             };
 
             return Ok(response);

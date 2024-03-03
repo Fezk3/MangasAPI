@@ -17,8 +17,6 @@ namespace MangasAPI.Repositories.Implementation
             this.dbcontext = dbcontext;
         }
 
-        public DbContext Dbcontext { get; }
-
         public async Task<Category> CreateAsync(Category category)
         {
 

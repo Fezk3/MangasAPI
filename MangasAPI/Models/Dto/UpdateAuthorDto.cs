@@ -1,11 +1,9 @@
 ﻿namespace MangasAPI.Models.Dto
 {
-    public class AuthorDto
+    public class UpdateAuthorDto
     {
 
         public string Name { get; set; }
-
-        // public List<MangaPostDto>? MangaPosts { get; set; }
 
     }
 }
