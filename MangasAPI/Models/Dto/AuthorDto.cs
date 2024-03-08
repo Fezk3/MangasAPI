@@ -5,7 +5,7 @@
 
         public string Name { get; set; }
 
-        // public List<MangaPostDto>? MangaPosts { get; set; }
+        public List<MangaPostDto>? MangaPosts { get; set; }
 
     }
 }

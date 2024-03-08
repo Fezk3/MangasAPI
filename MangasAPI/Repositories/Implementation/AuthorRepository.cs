@@ -56,7 +56,7 @@ namespace MangasAPI.Repositories.Implementation
 
         }
 
-        public async Task<Author> GetByIdAsync(Guid id)
+        public async Task<Author?> GetByIdAsync(Guid id)
         {
             var authorLookUp = await dbContext.Authors.FindAsync(id);
 

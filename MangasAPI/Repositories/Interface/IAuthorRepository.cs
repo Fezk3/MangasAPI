@@ -11,7 +11,7 @@ namespace MangasAPI.Repositories.Interface
 
         public Task<Boolean> DeleteAsync(Guid id);
 
-        public Task<Author> GetByIdAsync(Guid id);
+        public Task<Author?> GetByIdAsync(Guid id);
 
         public Task<IEnumerable<Author>> GetAllAsync();
 
